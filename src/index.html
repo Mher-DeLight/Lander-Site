@@ -4,11 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <title>Mher DeLight</title>
 </head>
 
 <body>
+    <!-- main section -->
+    <section class="min-h-screen bg-[#152C39] text-white">
+        <!-- navigation bar -->
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+            <a href="/" class="font-mono text-lg font-bold">
+                Mher <span class="text-cyan-400">DeLight</span>
+            </a>
 
+            <div class="flex gap-6 font-mono text-sm text-gray-400">
+                <a href="#projects" class="transition hover:text-white">projects</a>
+                <a href="#about" class="transition hover:text-white">about</a>
+            </div>
+        </nav>
+
+        <!-- the hero section -->
+        <main class="mx-auto flex min-h-[calc(50vh-132px)] md:min-h-[calc(100vh-88px)] items-center px-6">
+            <div class="mx-auto flex-col items-center">
+                <p class="mb-6 font-mono text-sm text-cyan-400">
+                    $ whoami
+                </p>
+
+                <h1 class="font-mono text-5xl font-bold tracking-tight sm:text-7xl">
+                    Heading Text <!-- lets have this here until i think of a good hero text -->
+                </h1>
+
+                <p class="mt-2 text-center max-w-xl text-xl leading-relaxed text-gray-400">
+                    Subtext
+                </p>
+
+                <div class="mt-10 flex flex-col items-center gap-4">
+                    <a href="#work" class="rounded-md bg-cyan-400 px-6 py-3 font-mono
+                 text-sm font-bold text-black transition
+                 hover:bg-cyan-300">
+                        See my work →
+                    </a>
+
+                    <a href="#about" class="rounded-md border border-gray-700 px-6 py-3
+                 font-mono text-sm text-gray-300 transition
+                 hover:border-gray-500 hover:text-white">
+                        or just say hi →
+                    </a>
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+    <div class="bg-gradient-to-b from-[#152C39] to-[#3D597D] h-64 w-full"></div>
+
+    <section>
+        <div id="work">
+            <div class="py-16 flex flex-row w-full overflow-x gap-4 p-4 border-gray-400 bg-[#3D597D]">
+                <a href="https://www.github.com/Mher-DeLight/cpersist" target="_blank">
+                    <div
+                        class="h-128 w-128 bg-gradient-to-b from-[#7991B0] to-[#3D597D] p-8 border-5px rounded-xl transition-all duration-200 hover:translateY(16px) hover:from-[#ffffff]">
+                        <div>
+                            <h3 class="text-3xl font-mono font-bold">cpersist</h3>
+                            <p class="font-mono text-xl">data persistence library</p>
+                        </div>
+                        <div class="mt-8 font-mono">
+                            <p>A fast & lightweight data persistence library for loading and saving data with a simple
+                                API. Save, load, encrypt, and archive your data easily.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
