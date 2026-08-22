@@ -9,6 +9,9 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-300: oklch(80.8% 0.114 19.571);
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-cyan-300: oklch(86.5% 0.127 207.078);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -200,6 +203,9 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -215,6 +221,9 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -223,6 +232,9 @@
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
+  }
+  .ml-8 {
+    margin-left: calc(var(--spacing) * 8);
   }
   .flex {
     display: flex;
@@ -254,8 +266,23 @@
   .w-22 {
     width: calc(var(--spacing) * 22);
   }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
   .w-36 {
     width: calc(var(--spacing) * 36);
+  }
+  .w-48 {
+    width: calc(var(--spacing) * 48);
+  }
+  .w-52 {
+    width: calc(var(--spacing) * 52);
+  }
+  .w-53 {
+    width: calc(var(--spacing) * 53);
+  }
+  .w-54 {
+    width: calc(var(--spacing) * 54);
   }
   .w-full {
     width: 100%;
@@ -328,18 +355,6 @@
   .bg-cyan-400 {
     background-color: var(--color-cyan-400);
   }
-  .bg-gray-300 {
-    background-color: var(--color-gray-300);
-  }
-  .bg-gray-700 {
-    background-color: var(--color-gray-700);
-  }
-  .bg-gray-700\/30 {
-    background-color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-gray-700) 30%, transparent);
-    }
-  }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
@@ -348,15 +363,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-gray-900) 30%, transparent);
     }
-  }
-  .bg-gray-900\/50 {
-    background-color: color-mix(in srgb, oklch(21% 0.034 264.665) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-gray-900) 50%, transparent);
-    }
-  }
-  .bg-red-300 {
-    background-color: var(--color-red-300);
   }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
@@ -372,6 +378,10 @@
   }
   .bg-gradient-to-l {
     --tw-gradient-position: to left in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-gradient-to-tl {
+    --tw-gradient-position: to top left in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .from-\[\#152C39\] {
@@ -463,11 +473,20 @@
   .text-gray-400 {
     color: var(--color-gray-400);
   }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
   .text-gray-800 {
     color: var(--color-gray-800);
   }
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+  .text-green-500 {
+    color: var(--color-green-500);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
@@ -502,6 +521,14 @@
     }
     .hover\:bg-cyan-300:hover {
       background-color: var(--color-cyan-300);
+    }
+    .hover\:from-gray-400:hover {
+      --tw-gradient-from: var(--color-gray-400);
+      --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    }
+    .hover\:from-red-400:hover {
+      --tw-gradient-from: var(--color-red-400);
+      --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     }
     .hover\:from-white:hover {
       --tw-gradient-from: var(--color-white);
